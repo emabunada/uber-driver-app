@@ -1,10 +1,14 @@
 import 'dart:developer' as developer;
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 void debug(dynamic text) {
-  developer.log(text.toString());
+  String msg = text.toString();
+  if (kDebugMode) {
+    print('\x1B[31m$msg\x1B[0m');
+  }
 }
 
 showMessage({required String message, bool error = true}) {

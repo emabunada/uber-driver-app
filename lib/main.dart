@@ -1,3 +1,4 @@
+import 'package:drivers_app/auth/screens/register_screen.dart';
 import 'package:drivers_app/global/widgets/app_text.dart';
 import 'package:drivers_app/spalsh/app_splash_screen.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +18,7 @@ void main() async {
             theme: ThemeData(
               primarySwatch: Colors.blue,
             ),
-            home: const AppSplashScreen(),
+            home: const RegisterScreen(),
           );
         }),
   ));

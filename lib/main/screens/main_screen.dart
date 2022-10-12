@@ -1,6 +1,5 @@
 import 'package:drivers_app/global/utils/app_colors.dart';
 import 'package:drivers_app/taps/screens/earning_tab_screen.dart';
-import 'package:drivers_app/global/utils/app_colors.dart';
 import 'package:drivers_app/taps/screens/home_tab_screen.dart';
 import 'package:drivers_app/taps/screens/profile_tab_screen.dart';
 import 'package:drivers_app/taps/screens/ratings_tab_screen.dart';

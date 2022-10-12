@@ -44,9 +44,11 @@ class AppTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: height ?? 55.h,
+      height: height?.h ?? 55.h,
       child: TextFormField(
         key: key,
+        obscureText: isSecure,
+        style: TextStyle(color: Colors.white),
         controller: controller,
         textAlign: align ?? TextAlign.start,
         textDirection: direction,
@@ -56,12 +58,12 @@ class AppTextField extends StatelessWidget {
         autocorrect: false,
         decoration: InputDecoration(
           errorStyle: TextStyle(fontSize: 10.sp),
-          contentPadding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 5.h),
+          contentPadding: EdgeInsets.symmetric(horizontal: 10.w),
           hintText: hint,
           hintStyle: TextStyle(
-            fontSize: hintSize ?? 14.sp,
+            fontSize: hintSize?.sp ?? 14.sp,
             fontFamily: 'Neo Sans Arabic',
-            color: appTextGrey5,
+            color: Colors.white,
           ),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(7.r),
@@ -104,7 +106,7 @@ class AppTextField extends StatelessWidget {
           prefixIcon: prefix,
         ),
         validator: validator,
-        expands: expand ?? true,
+        expands: expand ?? false,
         minLines: minLine,
         maxLines: maxLine,
       ),
